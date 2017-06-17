@@ -4,28 +4,28 @@
        <!--768〜991px (sm) と 992〜1199px (md) では、 offset として2カラム追加して、8カラムで表示-->
        <!--1200px〜 (lg) では、offset として3カラム追加して、6カラム（半分）で表示-->
        
-    <%= form_for(task) do |f| %>
-    <% if task.errors.any? %>
-    <div class="alert alert-warning">
-      <ul>
-        <% task.errors.full_messages.each do |task| %>
-          <li><%= task %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+    　<%= form_for(task) do |f| %>
+    　<% if task.errors.any? %>
+    　　<div class="alert alert-warning">
+      　　<ul>
+        　　<% task.errors.full_messages.each do |task| %>
+         　 <li><%= task %></li>
+        　　<% end %>
+      　　</ul>
+    　　</div>
+ 　　　　 <% end %>
   
- <div class="form-group">
-  <%= f.label :content, 'タスク' %>
-  <%= f.text_field :content, class: 'form-control' %>
-</div>
+　　　　 <div class="form-group">
+ 　　　　　　　　 <%= f.label :content, 'タスク' %>
+ 　　　　　　　　 <%= f.text_field :content, class: 'form-control' %>
+　　　　</div>
 
-  <div class="form-group">
-  <%= f.label :status, 'ステータス' %>
-  <%= f.text_field :status, class: 'form-control' %>
+ 　　　　　 <div class="form-group">
+　　　　  <%= f.label :status, 'ステータス' %>
+　　　　  <%= f.text_field :status, class: 'form-control' %>
+ 　　　　 </div>
+
+ 　　 <%= f.submit '投稿', class: 'btn btn-primary' %>
+　   <% end %>
   </div>
-
-  <%= f.submit '投稿', class: 'btn btn-primary' %>
-  <% end %>
- </div>
 </div>
